@@ -1,5 +1,5 @@
 // controllers/bookController.js
-const Book = require('../models/Book');
+const Book = require('../models/book');
 
 // 1. Get all books (Public)
 const getBooks = async (req, res) => {
@@ -57,5 +57,6 @@ const deleteBook = async (req, res) => {
         res.status(500).json({ message: "Server Error" });
     }
 };
+
 
 module.exports = { getBooks, getBookById, createBook, updateBook, deleteBook };
