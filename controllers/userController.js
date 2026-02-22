@@ -1,5 +1,5 @@
 // controllers/userController.js
-const User = require('../models/User'); // Import the User model we created
+const User = require('../models/user'); // Import the User model we created
 const bcrypt = require('bcrypt'); // Tool to hide passwords securely
 const jwt = require('jsonwebtoken'); // Tool to create login tokens
 
@@ -59,5 +59,6 @@ const loginUser = async (req, res) => {
         res.status(500).json({ message: "Server error", error: error.message });
     }
 };
+
 
 module.exports = { registerUser, loginUser };
